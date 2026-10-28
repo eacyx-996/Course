@@ -1,0 +1,72 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#app {
+  height: 100%;
+  font-family: 'Helvetica Neue', Helvetica, 'PingFang SC', 'Microsoft YaHei', Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ===== 全局平滑过渡 ===== */
+.el-button,
+.el-input__wrapper,
+.el-select__wrapper,
+.el-card,
+.el-menu-item,
+.el-tag {
+  transition: all 0.25s ease;
+}
+
+.el-table__row {
+  transition: background-color 0.2s ease;
+}
+
+/* ===== 路由淡入上移动画 ===== */
+.fade-slide-enter-active {
+  transition: all 0.3s ease-out;
+}
+.fade-slide-enter-from {
+  opacity: 0;
+  transform: translateY(12px);
+}
+.fade-slide-leave-active {
+  transition: all 0.15s ease-in;
+}
+.fade-slide-leave-to {
+  opacity: 0;
+}
+
+/* ===== 卡片悬浮效果 ===== */
+.hover-card {
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+.hover-card:hover {
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+/* ===== 滚动条美化 ===== */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background: #c0c4cc;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #909399;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}

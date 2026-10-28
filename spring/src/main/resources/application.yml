@@ -1,0 +1,33 @@
+spring:
+  application:
+    name: train-platform
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/train_platform
+    username: root
+    password: root
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 10MB
+
+server:
+  port: 8080
+  servlet:
+    context-path: /api
+
+mybatis-plus:
+  configuration:
+    map-underscore-to-camel-case: true
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  global-config:
+    banner: false
+
+# 自定义配置
+app:
+  jwt:
+    # 生产环境务必替换为更长的随机密钥
+    secret: train-platform-jwt-secret-key-2026-please-change-me
+    # token 有效期(毫秒),默认 24 小时
+    expire: 86400000
+  upload-dir: ./upload
